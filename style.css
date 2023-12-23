@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header, footer, section {
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    display: grid;
+}
+.grid{
+    grid-template-areas: ".lb .des .form";
+    height: fit-content;
+}
+.des, .lb {
+    display: grid;
+    max-height: 150px;
+    max-width: fit-content;
+    font-size: 2vw;
+    align-items: center;
+}
+.lb {
+    width: 50%;
+}
+.label {
+    display: block;
+    margin: 0%;
+    padding: 0%;
+    width: 70%;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    height: fit-content;
+    margin: 0px;
+    padding-left: 0;
+    align-items: center;
+    background: #990000; 
+    font-size: 1vw;
+} 
+li {
+    display: inline;
+    float: left;
+    padding: 1.8em;
+    padding-left: 0;
+    width: 100%;
+    font-size: 1.1em;
+    text-align: center;
+}
+li:hover{
+    background: #800000; 
+}
+.nav-item{
+    position: relative;
+}
+.nav-item:hover > .subnav {
+    display: block;
+}
+.subnav {
+    display: none;
+    min-width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    height: fit-content;
+}
+.subnav-item {
+    width: 15.25%;
+    padding-left: 1vw;
+    text-align: left;
+}
+.subnav-it {
+    width: 100%;
+    padding-left: 1vw;
+    text-align: left;
+}
+.subnav-it:hover {
+    background-color: #800000;
+    width: 82%;
+}
+.vid-text{
+    margin: 0;
+    font-size: 1.7vw;
+    text-align: center;
+}
+.video {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.mentors-text {
+    font-size: 1.4vw;
+    text-align: center;
+}
+.mentors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+.mentor {
+    width: 29%;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+.mentor img {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 15px;
+}
+p{
+    padding-right: 10%;
+    padding-left: 10%;
+    text-align: justify;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+footer{
+    clear: both; /*обтекание эл-та др. эл-тами запрещено со всех сторон*/
+    background-color: #990000;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: auto;
+}
+.foot-logo, .foot-icon {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: auto;
+    min-width: 95vw; 
+    height: 14vw;
+    top: 0;
+    left: 0;
+}
+.foot-icon {
+    height: 4vw; 
+}
+.foot-img {
+    display: block;
+    height: 100%;
+}
+.icon-link { 
+    height: 90%;
+    margin-right: 1vw;
+}
+.icon-link:hover {
+    background-color:#800000;
+}
+.icon {
+    height: 90%;
+}
+
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: initial;
+        align-items: center;
+    }
+    nav li {
+        padding-right: 0;
+        font-size: 1.5em;
+    }
+    .subnav-item {
+        width: 27%;
+        padding-left: 1vw;
+    }
+    .subnav-it:hover {
+        background-color: #800000;
+        width: 94%;
+    }
+    .mentor {
+        width: 70%;
+        margin-left: 15%;
+        margin-bottom: 20px;
+        padding-top: 10px;
+    }
+    .mentors-text, .vid-text{
+        font-size: 12px;
+    }
+    .foot-icon {
+        height: 7vw;
+    }
+    .foot-logo {
+        height: 22vw;
+    }
+}
